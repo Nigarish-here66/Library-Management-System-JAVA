@@ -1,25 +1,16 @@
-
 package LMS;
 
-public class Staff extends Person 
-{
-    protected double salary;
-    
-    public Staff(int id, String n, String a,int p, double s)
-    {
-        super(id,n,a,p);
-        salary = s;
+public class Staff extends Person {
+    private double salary;
+
+    public Staff(int id, String name, String address, int phone, double salary) {
+        super(id, name, address, phone);
+        this.salary = salary;
     }
-    
-    @Override
-    public void printInfo()
-    {
-        super.printInfo();
-        System.out.println("Salary: " + salary + "\n");         
-    }
-    
-    public double getSalary()
-    {
+
+    public double getSalary() {
         return salary;
     }
+
+    // Additional business methods for Staff (if needed) go here.
 }

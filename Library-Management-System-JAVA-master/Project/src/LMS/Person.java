@@ -1,91 +1,67 @@
-
 package LMS;
 
-public abstract class Person 
-{   
-    protected int id;           // ID of every person related to library
-    protected String password;  // Password of every person related to library
-    protected String name;      // Name of every person related to library
-    protected String address;   // Address of every person related to library
-    protected int phoneNo;      // PhoneNo of every person related to library
-    
-    static int currentIdNumber = 0;     //This will be unique for every person, since it will be incremented when everytime
-                                       //when a person is created
+public abstract class Person {
+    protected int id; // Unique ID for the person
+    protected String password; // Password for the person
+    protected String name; // Person's name
+    protected String address; // Person's address
+    protected int phoneNo; // Person's phone number
 
-    public Person(int idNum, String name, String address, int phoneNum)   // para cons.
-    {
+    static int currentIdNumber = 0; // Unique ID counter
+
+    // Constructor initializes the person data.
+    public Person(int idNum, String name, String address, int phoneNum) {
         currentIdNumber++;
-        
-        if(idNum==-1)
-        {
-            id = currentIdNumber;
+
+        // If idNum is -1, assign a new unique id; otherwise use the given id.
+        if (idNum == -1) {
+            this.id = currentIdNumber;
+        } else {
+            this.id = idNum;
         }
-        else
-            id = idNum;
-        
-        password = Integer.toString(id);
+
+        // For simplicity, we generate a default password using the id.
+        this.password = Integer.toString(this.id);
         this.name = name;
         this.address = address;
-        phoneNo = phoneNum;
-    }        
-    
-    // Printing Info of a Person
-    public void printInfo()
-    {
-        System.out.println("-----------------------------------------");
-        System.out.println("\nThe details are: \n");
-        System.out.println("ID: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Address: " + address);
-        System.out.println("Phone No: " + phoneNo + "\n");
+        this.phoneNo = phoneNum;
     }
-    
-    /*---------Setter FUNCs.---------*/
-    public void setAddress(String a)
-    {
+
+    // Setter methods (for updating the data)
+    public void setAddress(String a) {
         address = a;
     }
-    
-    public void setPhone(int p)
-    {
+
+    public void setPhone(int p) {
         phoneNo = p;
     }
-    
-    public void setName(String n)
-    {
+
+    public void setName(String n) {
         name = n;
     }
-    /*----------------------------*/
-    
-    /*-------Getter FUNCs.--------*/
-    public String getName()
-    {
+
+    // Getter methods (for accessing the data)
+    public String getName() {
         return name;
     }
-    
-    public String getPassword()
-    {
+
+    public String getPassword() {
         return password;
     }
-    
-     public String getAddress()
-    {
+
+    public String getAddress() {
         return address;
     }
-     
-     public int getPhoneNumber()
-    {
+
+    public int getPhoneNumber() {
         return phoneNo;
     }
-    public int getID()
-    {
+
+    public int getID() {
         return id;
     }
-    /*---------------------------*/
-    
-     public static void setIDCount(int n)
-    {
-        currentIdNumber=n;
+
+    public static void setIDCount(int n) {
+        currentIdNumber = n;
     }
-   
-} // Person Class Closed
+}
