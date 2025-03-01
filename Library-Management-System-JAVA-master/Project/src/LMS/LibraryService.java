@@ -23,12 +23,12 @@ public class LibraryService {
     }
 }
 
-// **Abstract Interface for Library Operations**
+// Abstract Interface for Library Operations
 interface LibraryOperation<T> {
     T execute(Library library, Object... args);
 }
 
-// **Find Borrower Implementation**
+// Find Borrower Implementation
 class FindBorrowerOperation implements LibraryOperation<Borrower> {
     @Override
     public Borrower execute(Library library, Object... args) {
@@ -42,7 +42,7 @@ class FindBorrowerOperation implements LibraryOperation<Borrower> {
     }
 }
 
-// **Find Clerk Implementation**
+// Find Clerk Implementation
 class FindClerkOperation implements LibraryOperation<Clerk> {
     @Override
     public Clerk execute(Library library, Object... args) {
@@ -56,7 +56,7 @@ class FindClerkOperation implements LibraryOperation<Clerk> {
     }
 }
 
-// **Search Books Implementation**
+// Search Books Implementation
 class SearchBooksOperation implements LibraryOperation<List<Book>> {
     @Override
     public List<Book> execute(Library library, Object... args) {

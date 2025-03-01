@@ -15,7 +15,7 @@ abstract class OfficeAssignedStaff extends Staff {
         currentOfficeNumber++;
     }
 
-    // Getter for office/desk number
+    // Getter for office
     public int getOfficeNo() {
         return officeNo;
     }

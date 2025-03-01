@@ -13,7 +13,6 @@ public class Library {
     private double perDayFine;
     private int holdRequestExpiry;
 
-    // Singleton instance
     private static Library instance = null;
 
     private Library() {
@@ -89,7 +88,7 @@ public class Library {
         action.execute(this);
     }
 
-    // **Fix: Keep the original methods so no error occurs**
+    // Fix: Keep the original methods so no error occurs
     public void addPerson(Person p) {
         performAction(new AddPersonAction(p)); // Uses OCP internally
     }

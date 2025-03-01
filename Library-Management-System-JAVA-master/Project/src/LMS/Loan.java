@@ -73,12 +73,12 @@ public class Loan {
     }
 }
 
-// **Abstract Action Class**
+// Abstract Action Class
 interface LoanAction {
     void execute(Loan loan);
 }
 
-// **Concrete Actions**
+// Concrete Actions
 class ReturnLoanAction implements LoanAction {
     private Staff receiver;
 

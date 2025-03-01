@@ -26,7 +26,7 @@ public class HoldRequest {
         return requestDate;
     }
 
-    // Open for extension: Hold request operations
+    // Open for extension: Hold the request actions
     public void performAction(HoldRequestAction action) {
         action.execute(this);
     }

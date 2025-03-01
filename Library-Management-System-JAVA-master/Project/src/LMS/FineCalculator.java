@@ -46,7 +46,7 @@ class ProgressiveFineStrategy implements FineStrategy {
         double fine = 0.0;
 
         for (int i = 1; i <= overdueDays; i++) {
-            fine += i * perDayFine; // Increasing fine per day
+            fine += i * perDayFine; 
         }
 
         return fine;

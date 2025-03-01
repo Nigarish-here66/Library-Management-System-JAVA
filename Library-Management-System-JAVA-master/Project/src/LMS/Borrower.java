@@ -14,7 +14,7 @@ public class Borrower extends Person {
 
     // Getters
     public ArrayList<Loan> getBorrowedBooks() {
-        return new ArrayList<>(borrowedBooks); // Return a copy to avoid external modification
+        return new ArrayList<>(borrowedBooks); 
     }
 
     public ArrayList<HoldRequest> getOnHoldBooks() {

@@ -18,12 +18,12 @@ public class Staff extends Person {
     }
 }
 
-// **Abstract Action Interface**
+// Abstract Action Interface
 interface StaffAction {
     void execute(Staff staff);
 }
 
-// **Concrete Actions**
+// Concrete Actions
 class UpdateSalaryAction implements StaffAction {
     private double newSalary;
 

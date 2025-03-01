@@ -29,14 +29,14 @@ public class LibraryDAO {
     }
 }
 
-// **Abstract Interface for Database Operations**
+// Abstract Interface for Database Operations
 interface DatabaseOperations {
     Connection getConnection();
     void loadLibraryData(Library library) throws SQLException, IOException;
     void saveLibraryData(Library library) throws SQLException;
 }
 
-// **Concrete Implementation for SQL Database**
+// Concrete Implementation for SQL Database
 class SQLDatabaseOperations implements DatabaseOperations {
     private final String host = "jdbc:derby://localhost:1527/LMS";
     private final String user = "haris";
@@ -83,7 +83,7 @@ class SQLDatabaseOperations implements DatabaseOperations {
             pstmt.setString(2, b.getTitle());
             pstmt.setString(3, b.getAuthor());
             pstmt.setString(4, b.getSubject());
-            pstmt.setBoolean(5, b.isIssued());  // Fixed missing issued status
+            pstmt.setBoolean(5, b.isIssued());  
             pstmt.executeUpdate();
         }
         con.close();

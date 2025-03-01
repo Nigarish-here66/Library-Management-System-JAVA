@@ -1,13 +1,13 @@
 package LMS;
 
 public abstract class Person {
-    protected int id; // Unique ID for the person
-    protected String password; // Password for the person
-    protected String name; // Person's name
-    protected String address; // Person's address
-    protected int phoneNo; // Person's phone number
+    protected int id; 
+    protected String password; 
+    protected String name; 
+    protected String address; 
+    protected int phoneNo; 
 
-    static int currentIdNumber = 0; // Unique ID counter
+    static int currentIdNumber = 0; 
 
     // Constructor initializes the person data.
     public Person(int idNum, String name, String address, int phoneNum) {
@@ -71,12 +71,12 @@ public abstract class Person {
     }
 }
 
-// **Abstract Action Interface**
+// Abstract Action Interface
 interface PersonAction {
     void execute(Person person);
 }
 
-// **Concrete Actions**
+// Concrete Actions
 class UpdateAddressAction implements PersonAction {
     private String newAddress;
 
